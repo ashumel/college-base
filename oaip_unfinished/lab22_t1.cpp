@@ -8,11 +8,11 @@ class train {
     string time1_example;
     string time2_example;
     public:
-        train(int number, string name, string time1, string time2) {
-            number_example = number;
-            name_example = name;
-            time1_example = time1;
-            time2_example = time2;
+        train(int number_example, string name_example, string time1_example, string time2_example) {
+            this->number_example = number_example;
+            this->name_example = number_example;
+            this->time1_example = number_example;
+            this->time2_example = number_example;
         } void setTrain() {
             cout << "Номер поезда: \n";
             cin >> number_example;
