@@ -27,17 +27,23 @@ public:
 
 class JuniorDeveloper : public Developer {
     public:
-    void code override (string fullName, int age, string position) : Developer(fullName, age, "Junior") {
+    void code override (string fullName, int age, string position) : Developer(fullName, age, "Junior") {}
         cout << "Junior разработчик по имени " << this->fullName << " пишет код...";  
-    }
+     virtual void technologies() = 0;
 }
 
 class MiddleDeveloper : public Developer {
     public:
     void code override (string fullName, int age, string position) : Developer(fullName, age, "Middle") {
         cout << "Middle разработчик со стажем   " << this->age << "года пишет код...";
-} } 
+    } 
+} 
 
+class SeniorDeveloper : public Developer {
+    public:
+    void code override (string fullName, int age, string position) : Developer(fullName, age, "Senior") {
+        cout << "Senior ра"
+    } }
 int main() {
 	setlocale(LC_ALL, "rus");
 
