@@ -1,2 +1,1 @@
-# MyCollegeLabs
-Лабораторные работы УО "ВГКЭ"
+![alt text](https://i.ibb.co/YhqJtRj/README-md.png)
