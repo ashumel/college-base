@@ -1,1 +1,1 @@
-![alt text](https://i.ibb.co/YhqJtRj/README-md.png)
+![alt text](https://i.ibb.co/GP9gvDx/My-College-Labs.png)
