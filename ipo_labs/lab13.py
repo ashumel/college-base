@@ -1,6 +1,7 @@
 import random
 import time
 
+
 class character():
     health = 4
     attack = 2
@@ -122,7 +123,9 @@ def fight_character(user_1, user_2):
                 print(f'{user_1.username} нанес урон [{round(hit, 2)}] по {user_2.username}')
             user_2.health = user_2.health - hit
         else: print(f'{user_1.username} промахнулся по {user_2.username}')
-        if user_2.health <= 0: break
+        if user_2.health <= 0:
+            user_2.health = 0
+            break
         time.sleep(1)
         if bool(random.getrandbits(1)) == True:
             if bool(random.getrandbits(1)) == True:
@@ -135,7 +138,9 @@ def fight_character(user_1, user_2):
             user_1.health = user_1.health - hit
         else: print(f'{user_2.username} промахнулся по {user_1.username}')
         time.sleep(1)
-        if user_1.health <= 0: break
+        if user_1.health <= 0:
+            user_1.health = 0
+            break
     if user_1.health <= user_2.health: user_winner = user_2.username
     elif user_1.health >= user_2.health: user_winner = user_1.username
     print(f' ***\nHP {user_1.username}: {round(user_1.health, 2)} \nHP {user_2.username}: {round(user_2.health, 2)}\n ***')
