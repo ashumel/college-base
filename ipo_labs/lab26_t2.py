@@ -1,15 +1,23 @@
 import numpy as np
-import math
 
-matrix = np.array([[1, 2, 3, 5], [4, 5, 7, 6], [1, 7, 8, 9], [2, 4, 5, 2]])
-print(matrix)
-result = np.fliplr(matrix).diagonal()
-result_diag = list(result)
-print(result)
-result = list((np.array(matrix)).reshape(9,))
-#result = list((np.array(matrix)).reshape(9,))
-#for i in result_diag:
-#    result.remove(i)
-#result.remove(9)
-#
-#print(f'''Ответ: {math.prod(result)}''')
+
+custom_n = int(input('Введите размерность матрицы N: '))
+custom_m = int(input('Введите размерность матрицы M: '))
+
+matrix_list = []
+for i in range(custom_n):
+    m_list = []
+    for j in range(custom_m):
+        m_list.append(int(input(f'Введите элемент {i}x{j}: ')))
+    matrix_list.append(m_list)
+
+matrix = np.array(matrix_list)
+print(f'Исходная матрица: {matrix}')
+
+result = 1
+for i in range(custom_n):
+    if i+1 != custom_n:
+        result = result * matrix[i][(custom_m-1)-(i+1)]
+    if i != 0:
+        result = result * matrix[i][(custom_m-1)-(i-1)]
+print(f'Ответ: {result}')
