@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import random
 print('---- Задание 1 ----\n')
-column = int(input('Введите кол-во колонок: '))
+column = int(input('Введите кол-во содержимого в колонках: '))
 dict_1 = {}
 while True:
     column_name = input('Введите название новой колонки: ')

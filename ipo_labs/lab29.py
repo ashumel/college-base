@@ -36,11 +36,10 @@ def delFromDataFrame(frame : pd.DataFrame):
         except KeyError:
             print('⚠️ Такой колонки не существует!')
 
-"""
 frame = create_DataFrame()
 print(f'Задание 1:\n {frame}')
 delFromDataFrame(frame)
-"""
+
 
 
 student_1 = 'Аниськов'
