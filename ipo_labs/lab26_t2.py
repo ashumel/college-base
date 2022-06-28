@@ -12,7 +12,7 @@ for i in range(custom_n):
     matrix_list.append(m_list)
 
 matrix = np.array(matrix_list)
-print(f'Исходная матрица: {matrix}')
+print(f'Исходная матрица:\n {matrix}')
 
 result = 1
 for i in range(custom_n):
